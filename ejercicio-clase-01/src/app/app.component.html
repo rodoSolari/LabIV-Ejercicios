@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+<h1>Ejercicio 01 Lab IV Rodolfo Solari</h1>
+
+<label>Edad Uno:  </label>
+<input type="number" id="textEdadUno" [(ngModel)]="this.edadUno" >
+<br> <br>
+
+<label>Edad Dos:  </label>
+<input type="number" id="textEdadDos" [(ngModel)]="this.edadDos">
+<br> <br>
+
+<input type="button" (click)="this.CalcularSuma()" value="Calcular Suma">
+<!--<input type="number" [(ngModel)]="this.suma" class="field left" readonly>-->
+
+<label>   {{this.suma}}</label>
+
+<label *ngIf="this.Mostrar()">
+  Error, no se puede realizar la suma, ingrese valores numericos
+</label>
+<br> <br>
+
+<input type="button" (click)="this.CalcularPromedio()" value="Calcular Promedio">
+
+<label>   {{this.promedio}}</label>
+
+<label *ngIf="this.Mostrar()">
+  Error, no se puede realizar el promedio, ingrese valores numericos
+</label>
+<br> <br>
+
+<input type="button" (click)="this.Limpiar()" value="Limpiar">
